@@ -19,3 +19,16 @@ $ ip addr
 
 Ici l'interface sur laquelle il va falloir écouter est eth0.
 
+3. Exemples.
+
+3a. Ecouter sur un port TCP
+
+$ sudo tcpdump -nn tcp port 8083
+
+$ sudo tcpdump -i ens160 -nn tcp port 8083
+
+3b. Ecouter le trafic entrant venant d'une IP 
+
+$ sudo tcpdump -i ens160 src 192.168.105.59
+
+$ sudo tcpdump -i ens160 -nn tcp port 8083 and host 192.168.105.59
