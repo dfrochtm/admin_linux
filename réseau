@@ -1,0 +1,21 @@
+Contrôle des flux entrant sur un serveur avec tcpdump.
+
+1. Noter l'IP du client
+
+Si PC => ipconfig
+Si Linux => ip addr
+
+2. Noter l'Interface du serveur côté réception.
+
+Sous linux :
+
+$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 16436 qdisc noqueue state UNKNOWN
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UNKNOWN qlen 1000
+    link/ether 00:50:56:bc:2a:59 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.92.11/24 brd 192.168.92.255 scope global eth0
+
+Ici l'interface sur laquelle il va falloir écouter est eth0.
+
